@@ -21,6 +21,7 @@ for i in range(1, 300):
     name = name.lower()
     resumeNames.append(name)
 
+#Check who submitted resumes against who attended
 attendedLinks = list()
 noAttendedLinks = list()
 for i in range(len(resumeNames)):
@@ -30,6 +31,7 @@ for i in range(len(resumeNames)):
     else:
         noAttendedLinks.append(link)
 
+#Write links for attendees and non-attendees in separate columns in result.xlsx
 for i in range(len(attendedLinks)):
     ws['A'+str(i+1)] = attendedLinks[i]
 
